@@ -22,3 +22,18 @@ Compare with it, we can more easily to get the cystal concurrency ability, is Po
 
 This is Crystal official example to count the total number of some files. For this example, we want to get Crystal [Source Code ](https://github.com/crystal-lang/crystal/tree/master/src) lines.
 
+Run `make countfilelines` and get output:
+
+```
+real	0m22.067s
+user	0m15.894s
+sys	0m6.864s
+finish countfilelines-crystal test
+
+real	0m6.819s
+user	0m3.088s
+sys	0m5.639s
+finish countfilelines-go test
+```
+
+You can see the Go is about 3x faster than Crystal.

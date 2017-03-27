@@ -1,6 +1,6 @@
 #!/bin/bash
 
-crystal build countfilelines.cr -o ../../bin/countfilelines-crystal
+crystal build countfilelines.cr -o ../../bin/countfilelines-crystal  --release
 go build -o ../../bin/countfilelines-go  countfilelines.go
 
 time for (( i=1; i<=1000; i++ ))

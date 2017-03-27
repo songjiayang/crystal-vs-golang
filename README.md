@@ -11,7 +11,7 @@ Compare with it, we can more easily to get the crystal concurrency ability, is P
 
 ### Testing System
 
-- My MacBook Air (11-inch, Early 2015), 1.6 GHz Intel Core i5, 4 GB 1600 MHz DDR3
+- My MacBook Air (11-inch, Early 2015), 1.6 GHz Intel Core i5 (2 core), 4 GB 1600 MHz DDR3
 - Crystal v0.21.1
 - Golang v1.7.3
 
@@ -25,15 +25,15 @@ This is Crystal official example to count the total number of some files. For th
 Run `make countfilelines` and get output:
 
 ```
-real	0m22.067s
-user	0m15.894s
-sys	0m6.864s
+real	0m17.833s
+user	0m9.668s
+sys	0m8.123s
 finish countfilelines-crystal test
 
-real	0m6.819s
-user	0m3.088s
-sys	0m5.639s
+real	0m8.549s
+user	0m3.209s
+sys	0m6.861s
 finish countfilelines-go test
 ```
 
-You can see the Go is about 3x faster than Crystal.
+You can see the Go is about 2x faster than Crystal.

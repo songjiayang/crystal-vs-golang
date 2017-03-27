@@ -4,9 +4,12 @@ import (
 	"bufio"
 	"os"
 	"path/filepath"
+	"runtime"
 )
 
 func main() {
+	runtime.GOMAXPROCS(1)
+
 	files, _ := filepath.Glob(os.Getenv("HOME") + "/crystal/src/*.cr")
 
 	channel := make(chan int, 1)

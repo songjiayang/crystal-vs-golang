@@ -7,7 +7,7 @@ Compare with golang to check crystal's concurrency ability.
 
 Crystal has the sample CONCURRENCY MODEL (using `channels`) like Go, we all konwn that Golang has a good concurrency ability and  It's very hot last frew yeas.
 
-Compare with it, we can more easily to get the crystal concurrency ability, is Powerful or Not.
+Compare with it, we can more easily to check the crystal concurrency, is Powerful or Not.
 
 ### Testing System
 
@@ -36,4 +36,24 @@ sys	0m6.861s
 finish countfilelines-go test
 ```
 
-You can see the Go is about 2x faster than Crystal.
+You can see that Go is about 2x faster than Crystal.
+
+#### sleep
+
+In order to ignore the different execute time running in each fiber, we just do sleep 1ms and open 100_000 fibers at once.
+
+Run `make sleep` and get output:
+
+```
+real	0m12.901s
+user	0m3.337s
+sys	0m8.733s
+finish sleep-crystal test
+
+real	0m6.208s
+user	0m5.011s
+sys	0m1.146s
+finish sleep-go test
+```
+
+You can see that Go is about 2x faster than Crystal and Crystal cost too much time on `system time`.
